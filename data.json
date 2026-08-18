@@ -1,0 +1,24 @@
+{
+    "personal": {
+        "name": "George Alexander Orrala Tomalá",
+        "shortName": "George",
+        "career": "Electrónica y Automatización",
+        "university": "Escuela Superior Politécnica de Chimborazo - ESPOCH",
+        "description": "Soy estudiante de Electrónica y Automatización."
+    },
+    "projects": [
+        {
+            "title": "Proyecto 1",
+            "description": "Descripción del proyecto 1.",
+            "icon": "fa-code",
+            "tags": ["HTML", "CSS", "JavaScript"]
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Certificado 1",
+            "institution": "Institución 1",
+            "year": "2026"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Clon T | Mi cuenta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="app-header">
+            <div class="user-block">
+                <strong>Hola, George</strong>
+                <span>+593 99 123 4567</span>
+            </div>
+            <div class="header-actions" aria-label="Acciones de cuenta">
+                <button type="button" aria-label="Notificaciones">&#128276;</button>
+                <button type="button" aria-label="Abrir menú">&#9776;</button>
+            </div>
+        </header>
+
+        <section class="banner-section" aria-label="Promociones">
+            <div class="banner-track" id="banner-track"></div>
+            <div class="banner-dots" id="banner-dots" aria-hidden="true"></div>
+        </section>
+
+        <section class="balance-card" aria-labelledby="balance-title">
+            <div class="balance-header">
+                <div>
+                    <span class="eyebrow">Tu línea móvil</span>
+                    <h1 id="balance-title">SALDO</h1>
+                    <p class="balance-amount" id="balance-amount">$0,00</p>
+                </div>
+                <button class="buy-button" id="buy-button" type="button">Compra más</button>
+            </div>
+
+            <div class="plan-info">
+                <div>
+                    <strong id="expiry-date">Vence 30/08/2026</strong>
+                    <span id="plan-name">Incluye un combo</span>
+                </div>
+                <span class="active-label">Activo</span>
+            </div>
+
+            <div class="usage-grid" id="usage-grid" aria-label="Consumo del combo"></div>
+        </section>
+
+        <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

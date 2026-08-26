@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <title>YouTube | Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <header class="topbar">
+        <button class="icon-button menu-button" id="menu-button" type="button" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
+        <a class="brand" href="#inicio" aria-label="YouTube inicio"><span class="brand-mark"><i class="fa-solid fa-play"></i></span><strong>YouTube</strong></a>
+        <div class="search-area">
+            <form class="search-form" id="search-form">
+                <input id="search-input" type="search" placeholder="Buscar" aria-label="Buscar videos">
+                <button class="search-button" type="submit" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <button class="icon-button voice-button" type="button" aria-label="Buscar por voz"><i class="fa-solid fa-microphone"></i></button>
+        </div>
+        <div class="top-actions">
+            <button class="icon-button" type="button" aria-label="Crear"><i class="fa-solid fa-video"></i></button>
+            <button class="icon-button" type="button" aria-label="Notificaciones"><i class="fa-regular fa-bell"></i></button>
+            <img class="user-avatar" src="canal/veritasium/logo.png" alt="Perfil">
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a class="nav-item active" href="#inicio"><span><i class="fa-solid fa-house"></i></span>Inicio</a>
+                <a class="nav-item" href="#shorts"><span><i class="fa-solid fa-bolt"></i></span>Shorts</a>
+                <a class="nav-item" href="#suscripciones"><span><i class="fa-solid fa-circle-play"></i></span>Suscripciones</a>
+                <hr>
+                <p class="nav-heading">Tú</p>
+                <a class="nav-item" href="#historial"><span><i class="fa-solid fa-clock-rotate-left"></i></span>Historial</a>
+                <a class="nav-item" href="#listas"><span><i class="fa-solid fa-list"></i></span>Listas</a>
+                <a class="nav-item" href="#videos"><span><i class="fa-solid fa-circle-user"></i></span>Tus videos</a>
+                <hr>
+                <p class="nav-heading">Suscripciones</p>
+                <a class="channel-link" href="#canal-dw"><img src="canal/dw/logo.png" alt="">DW Español</a>
+                <a class="channel-link" href="#canal-veritasium"><img src="canal/veritasium/logo.png" alt="">Veritasium</a>
+                <a class="channel-link" href="#canal-moviegasm"><img src="canal/moviegasm/logo.png" alt="">Moviegasm</a>
+                <a class="channel-link" href="#canal-charles"><img src="canal/charles/logo.png" alt="">Charles</a>
+                <a class="channel-link" href="#canal-bn"><img src="canal/bn%20periodismo/logo.png" alt="">BN Periodismo</a>
+                <a class="channel-link" href="#canal-historia"><img src="canal/historia%20geopolitica/logo.png" alt="">Historia Geopolítica</a>
+            </nav>
+        </aside>
+
+        <main class="content" id="inicio">
+            <div class="category-bar" aria-label="Categorías">
+                <button class="category active" type="button">Todo</button>
+                <button class="category" type="button">Noticias</button>
+                <button class="category" type="button">Ciencia</button>
+                <button class="category" type="button">Películas</button>
+                <button class="category" type="button">Música</button>
+                <button class="category" type="button">En directo</button>
+            </div>
+
+            <section class="shorts-section" id="shorts" aria-labelledby="shorts-title">
+                <div class="section-heading"><h1 id="shorts-title"><img src="img/short.png" alt=""> Shorts</h1><button type="button" class="see-more">Ver todo</button></div>
+                <div class="shorts-grid" id="shorts-grid"></div>
+            </section>
+
+            <section class="videos-section" id="videos" aria-labelledby="videos-title">
+                <div class="section-heading"><h2 id="videos-title">Recomendados</h2><button type="button" class="filter-button"><i class="fa-solid fa-sliders"></i> Filtrar</button></div>
+                <div class="video-grid" id="video-grid"></div>
+            </section>
+        </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+</html>

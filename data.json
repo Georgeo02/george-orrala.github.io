@@ -1,24 +1,64 @@
 {
-    "personal": {
-        "name": "George Alexander Orrala Tomalá",
-        "shortName": "George",
-        "career": "Electrónica y Automatización",
-        "university": "Escuela Superior Politécnica de Chimborazo - ESPOCH",
-        "description": "Soy estudiante de Electrónica y Automatización."
+  "proyectos": [
+    {
+      "titulo": "Control PID para temperatura",
+      "descripcion": "Sistema de control de temperatura con Arduino y sensor LM35, usando actuador PWM y display LCD.",
+      "tech": "Arduino · C++ · PID"
     },
-    "projects": [
-        {
-            "title": "Proyecto 1",
-            "description": "Descripción del proyecto 1.",
-            "icon": "fa-code",
-            "tags": ["HTML", "CSS", "JavaScript"]
-        }
-    ],
-    "certificates": [
-        {
-            "title": "Certificado 1",
-            "institution": "Institución 1",
-            "year": "2026"
-        }
-    ]
+    {
+      "titulo": "Automatización de riego",
+      "descripcion": "Riego inteligente con ESP8266, sensor de humedad y programación por umbrales. Panel web para monitoreo.",
+      "tech": "ESP8266 · NodeMCU · HTML/CSS"
+    },
+    {
+      "titulo": "Organizador de tareas Kanban",
+      "descripcion": "Tablero personal híbrido entre Kanban y Scrum para organizar proyectos, pendientes y tareas con memoria local.",
+      "tech": "HTML · CSS · JavaScript · LocalStorage",
+      "url": "proyectos/organizador-tareas/index.html"
+    },
+    {
+      "titulo": "Clon WhatsApp · Chats",
+      "descripcion": "Clon responsive de la pantalla principal de WhatsApp con chats, filtros, búsqueda y transición interna entre conversaciones.",
+      "tech": "HTML · CSS · JavaScript",
+      "url": "proyectos/clon-whatsapp/index.html"
+    },
+    {
+      "titulo": "Clon T - Prototipo móvil",
+      "descripcion": "Prototipo móvil de una cuenta telefónica con banners, saldo y consumo dinámico de datos, voz y SMS.",
+      "tech": "HTML · CSS · JavaScript",
+      "url": "proyectos/Clon%20T/index.html"
+    },
+    {
+      "titulo": "Clon YouTube",
+      "descripcion": "Interfaz de YouTube con Shorts, búsqueda, categorías y tarjetas de videos usando recursos locales.",
+      "tech": "HTML · CSS · JavaScript",
+      "url": "proyectos/Clon%20youtube/index.html"
+    }
+  ],
+  "certificados": [
+    {
+      "titulo": "Automatización Industrial con PLC",
+      "entidad": "Coursera · Siemens",
+      "fecha": "2025",
+      "icono": "fas fa-industry"
+    },
+    {
+      "titulo": "Electrónica de Potencia",
+      "entidad": "ESPOCH · Curso intensivo",
+      "fecha": "2024",
+      "icono": "fas fa-bolt"
+    },
+    {
+      "titulo": "Python para Ciencia de Datos",
+      "entidad": "DataCamp",
+      "fecha": "2024",
+      "icono": "fab fa-python"
+    },
+    {
+      "titulo": "Diseño de PCB con KiCad",
+      "entidad": "Instituto Tecnológico",
+      "fecha": "2023",
+      "icono": "fas fa-microchip"
+    }
+  ]
 }

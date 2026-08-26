@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b141a">
+    <title>WhatsApp | Chats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="phone-app">
+        <aside class="chat-panel" id="chat-panel">
+            <header class="chat-header">
+                <div class="profile-mark">GO</div>
+                <div class="header-actions">
+                    <button class="icon-button" type="button" aria-label="Comunidades">&#9673;</button>
+                    <button class="icon-button" type="button" aria-label="Nuevo chat" id="new-chat">&#9998;</button>
+                    <button class="icon-button" type="button" aria-label="Más opciones">&#8942;</button>
+                </div>
+            </header>
+            <div class="chat-heading"><h1>Chats</h1><span id="unread-total">4 no leídos</span></div>
+            <label class="search-box"><span aria-hidden="true">&#128269;</span><input id="search-input" type="search" placeholder="Buscar o iniciar un chat" aria-label="Buscar chats"></label>
+            <nav class="filter-tabs" aria-label="Filtrar conversaciones">
+                <button class="filter-tab active" type="button" data-filter="all">Todos</button>
+                <button class="filter-tab" type="button" data-filter="unread">No leídos</button>
+                <button class="filter-tab" type="button" data-filter="groups">Grupos</button>
+            </nav>
+            <div class="chat-list" id="chat-list" tabindex="0" aria-label="Lista de chats"></div>
+            <p class="privacy-note">&#128274; Tus mensajes están protegidos con cifrado de extremo a extremo</p>
+        </aside>
+
+        <section class="conversation-panel" id="conversation-panel" aria-label="Conversación">
+            <div class="empty-conversation" id="empty-conversation">
+                <div class="whatsapp-mark">&#9742;</div>
+                <h2>WhatsApp para escritorio</h2>
+                <p>Envía y recibe mensajes sin mantener tu teléfono conectado.</p>
+                <small>&#128274; Cifrado de extremo a extremo</small>
+            </div>
+            <div class="conversation" id="conversation" hidden>
+                <header class="conversation-header">
+                    <button class="back-button" id="back-button" type="button" aria-label="Volver a chats">&#8592;</button>
+                    <div class="conversation-avatar" id="conversation-avatar"></div>
+                    <div class="conversation-person"><strong id="conversation-name"></strong><span id="conversation-status"></span></div>
+                    <div class="header-actions"><button class="icon-button" type="button" aria-label="Buscar en conversación">&#128269;</button><button class="icon-button" type="button" aria-label="Más opciones">&#8942;</button></div>
+                </header>
+                <div class="message-area" id="message-area"></div>
+                <form class="message-form" id="message-form"><button class="icon-button" type="button" aria-label="Adjuntar archivo">&#128206;</button><input id="message-input" placeholder="Escribe un mensaje" autocomplete="off" aria-label="Mensaje"><button class="send-button" type="submit" aria-label="Enviar mensaje">&#10148;</button></form>
+            </div>
+        </section>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+</html>

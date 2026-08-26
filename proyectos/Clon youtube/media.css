@@ -1,0 +1,53 @@
+@media (max-width: 1024px) {
+    .sidebar { width: 200px; }
+    .content { padding-right: 24px; padding-left: 24px; }
+    .shorts-grid { grid-template-columns: repeat(4, minmax(125px, 1fr)); }
+    .video-grid { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+}
+
+@media (max-width: 768px) {
+    .topbar { gap: 12px; padding: 0 14px; }
+    .brand strong { font-size: 18px; }
+    .search-area { order: 4; width: 100%; flex-basis: 100%; }
+    .topbar { height: auto; min-height: 60px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+    .search-form { height: 38px; }
+    .voice-button { display: none; }
+    .top-actions { margin-left: auto; }
+    .sidebar { position: fixed; top: 0; left: -240px; z-index: 30; width: 232px; height: 100vh; padding-top: 80px; box-shadow: 4px 0 16px rgba(0,0,0,.15); transition: left .2s ease; }
+    .sidebar.open { left: 0; }
+    .content { width: 100%; padding: 0 16px 36px; }
+    .category-bar { top: 120px; }
+    .shorts-grid { grid-template-columns: repeat(4, minmax(115px, 1fr)); overflow-x: auto; }
+    .short-card { min-width: 115px; }
+}
+
+@media (max-width: 425px) {
+    .topbar { gap: 8px; }
+    .brand strong { display: none; }
+    .top-actions .icon-button:first-child { display: none; }
+    .content { padding-right: 12px; padding-left: 12px; }
+    .category-bar { margin: 0 -12px; padding-right: 12px; padding-left: 12px; }
+    .shorts-grid { grid-template-columns: repeat(4, 130px); }
+    .video-grid { grid-template-columns: 1fr; gap: 26px; }
+    .section-heading h1, .section-heading h2 { font-size: 19px; }
+}
+
+@media (max-width: 375px) {
+    .topbar { padding-right: 10px; padding-left: 10px; }
+    .menu-button { width: 34px; }
+    .top-actions .icon-button:nth-child(2) { display: none; }
+    .search-button { width: 48px; }
+    .search-form input { padding-right: 10px; padding-left: 12px; }
+    .short-card { min-width: 120px; }
+    .shorts-grid { grid-template-columns: repeat(4, 120px); gap: 10px; }
+}
+
+@media (max-width: 320px) {
+    .topbar { min-height: 56px; }
+    .content { padding-right: 10px; padding-left: 10px; }
+    .category-bar { top: 116px; margin-right: -10px; margin-left: -10px; padding-right: 10px; padding-left: 10px; }
+    .category { padding-right: 13px; padding-left: 13px; }
+    .shorts-grid { grid-template-columns: repeat(4, 108px); }
+    .short-card { min-width: 108px; }
+    .video-copy h3 { font-size: 14px; }
+}

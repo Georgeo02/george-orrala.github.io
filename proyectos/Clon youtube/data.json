@@ -1,0 +1,16 @@
+{
+    "videos": [
+        { "title": "La ciencia detrás de las preguntas que nadie se hace", "channel": "Veritasium en español", "logo": "canal/veritasium/logo.png", "thumbnail": "canal/veritasium/portada-1.png", "duration": "12:48", "views": "1.2 M de vistas", "date": "hace 3 días" },
+        { "title": "El mundo explicado en 10 minutos", "channel": "DW Español", "logo": "canal/dw/logo.png", "thumbnail": "canal/dw/portada-1.png", "video": "canal/dw/portada-2-video.mp4", "duration": "10:16", "views": "842 mil vistas", "date": "hace 1 semana" },
+        { "title": "La historia que cambió el cine para siempre", "channel": "Comentando Películas", "logo": "canal/comentando%20peliculas/logo.png", "thumbnail": "canal/comentando%20peliculas/portada-1.png", "duration": "18:22", "views": "315 mil vistas", "date": "hace 2 días" },
+        { "title": "¿Qué pasó realmente? Una mirada diferente", "channel": "BN Periodismo", "logo": "canal/bn%20periodismo/logo.png", "thumbnail": "canal/bn%20periodismo/portada-1.png", "duration": "08:40", "views": "96 mil vistas", "date": "hace 5 horas" },
+        { "title": "El análisis de una película inolvidable", "channel": "Moviegasm", "logo": "canal/moviegasm/logo.png", "thumbnail": "canal/moviegasm/portada-1.png", "video": "canal/moviegasm/portada-1-video.mp4", "duration": "21:04", "views": "567 mil vistas", "date": "hace 4 días" },
+        { "title": "Mapas, fronteras y el poder de la geopolítica", "channel": "Historia Geopolítica", "logo": "canal/historia%20geopolitica/logo.png", "thumbnail": "canal/historia%20geopolitica/portada-1.png", "duration": "15:37", "views": "203 mil vistas", "date": "hace 6 días" }
+    ],
+    "shorts": [
+        { "title": "Un dato que te va a sorprender", "thumbnail": "canal/veritasium/portada-1.png" },
+        { "title": "La noticia del día en 30 segundos", "thumbnail": "canal/dw/portada-2.png", "video": "canal/dw/short-1.mp4" },
+        { "title": "El mejor giro de una película", "thumbnail": "canal/charles/portada-1.png", "video": "canal/charles/short-1.mp4" },
+        { "title": "Una historia para pensar", "thumbnail": "canal/historia%20geopolitica/portada-1.png" }
+    ]
+}

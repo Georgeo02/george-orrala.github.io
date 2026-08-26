@@ -1,0 +1,29 @@
+{
+    "balance": "$12,50",
+    "plan": {
+        "expiry": "Vence 30/08/2026",
+        "name": "Incluye un combo"
+    },
+    "banners": [
+        {
+            "label": "Oferta exclusiva",
+            "title": "Duplica tus gigas por $5",
+            "description": "Actívalo hoy desde tu app"
+        },
+        {
+            "label": "Combo semanal",
+            "title": "Todo lo que necesitas",
+            "description": "Navega, llama y escribe sin límites"
+        },
+        {
+            "label": "Beneficio T",
+            "title": "Comparte tus datos",
+            "description": "Conecta tus dispositivos fácilmente"
+        }
+    ],
+    "usage": [
+        { "label": "DATOS", "used": "4.2 GB", "total": "10 GB", "progress": 42, "color": "#377dff" },
+        { "label": "VOZ", "used": "120 min", "total": "300 min", "progress": 40, "color": "#1aa879" },
+        { "label": "SMS", "used": "35", "total": "100", "progress": 35, "color": "#ff8a3d" }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    { "id": "portfolio", "title": "Terminar portafolio web personal", "area": "Desarrollo web", "detail": "Completar HTML, CSS, JS, JSON y la estructura de proyectos, certificados y redes.", "priority": "high", "status": "todo" },
+    { "id": "scada", "title": "Definir arquitectura del sistema SCADA", "area": "Automatización / Redes", "detail": "Conectar la arquitectura final con los eventos del SCADA.", "priority": "high", "status": "todo" },
+    { "id": "telegram", "title": "Alertas de reconectadores por Node-RED", "area": "Sistemas eléctricos / IoT", "detail": "Implementar recepción de eventos y envío de alertas a Telegram o WhatsApp.", "priority": "high", "status": "todo" },
+    { "id": "iec", "title": "Comunicación IEC 60870-5-101 / 104", "area": "Automatización", "detail": "Determinar cómo extraer eventos del sistema Schneider sin enviar comandos.", "priority": "medium", "status": "ready" },
+    { "id": "thesis", "title": "Proyecto de titulación con Node-RED", "area": "Automatización", "detail": "Seleccionar y desarrollar un tema con suficiente peso académico.", "priority": "high", "status": "todo" },
+    { "id": "eersa", "title": "Procesamiento de geoservicios EERSA", "area": "Python / GIS", "detail": "Procesar los 167.385 registros y relacionar postes y seccionadores.", "priority": "high", "status": "todo" },
+    { "id": "spatial", "title": "Cruce espacial de postes y seccionadores", "area": "Python / GIS", "detail": "Corregir el procesamiento de coordenadas y obtener coincidencias.", "priority": "medium", "status": "ready" },
+    { "id": "fuses", "title": "Identificación de seccionadores fusibles", "area": "Sistemas eléctricos / GIS", "detail": "Completar la identificación de elementos en el geoportal.", "priority": "medium", "status": "ready" },
+    { "id": "lead-lag", "title": "Compensador adelanto-atraso", "area": "Control automático", "detail": "Terminar el diseño para MP = 7 %, tss = 0,2 s y essp = 0,01.", "priority": "high", "status": "todo" },
+    { "id": "dc-speed", "title": "Control de velocidad de motor DC", "area": "Control / Máquinas", "detail": "Completar modelo, controlador y respuesta con las especificaciones.", "priority": "medium", "status": "ready" },
+    { "id": "dc-torque", "title": "Motor DC con torque inicial", "area": "Máquinas eléctricas", "detail": "Configurar correctamente la condición de carga inicial.", "priority": "medium", "status": "ready" },
+    { "id": "plant", "title": "Identificación de planta del motor", "area": "Control", "detail": "Validar el modelo obtenido mediante respuesta y frecuencia.", "priority": "medium", "status": "ready" },
+    { "id": "buck", "title": "Buck 48 V → 12 V", "area": "Electrónica de potencia", "detail": "Documentar y validar el proyecto avanzado.", "priority": "low", "status": "done" },
+    { "id": "pid-buck", "title": "Control PID del Buck con ESP32", "area": "Electrónica de potencia / Embebidos", "detail": "Documentar implementación y resultados experimentales.", "priority": "medium", "status": "ready" },
+    { "id": "bidirectional", "title": "Buck-Boost bidireccional", "area": "Electrónica de potencia", "detail": "Completar análisis, modelado y control.", "priority": "medium", "status": "ready" },
+    { "id": "buck-5", "title": "Buck 12 V → 5 V", "area": "Electrónica de potencia", "detail": "Terminar diseño, simulación y análisis.", "priority": "medium", "status": "ready" },
+    { "id": "esp32", "title": "Proyecto con ESP32 Supermini", "area": "Sistemas embebidos", "detail": "Integrar adecuadamente control, PWM y adquisición.", "priority": "medium", "status": "ready" },
+    { "id": "practices", "title": "Prácticas Festo / LabVolt / KyH", "area": "Automatización", "detail": "Revisar cuáles están documentadas y cuáles faltan.", "priority": "low", "status": "todo" }
+  ]
+}

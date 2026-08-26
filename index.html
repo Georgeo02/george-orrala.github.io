@@ -1,57 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>George Orrala | Portafolio</title>
+    <!-- Font Awesome (íconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <!-- Estilos locales -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
-        <nav class="navbar">
-            <a href="#inicio" class="logo">Mi Portafolio</a>
-            <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link active">INICIO</a></li>
-                <li><a href="#proyectos" class="nav-link">PROYECTOS</a></li>
-                <li><a href="#certificados" class="nav-link">CERTIFICADOS</a></li>
-            </ul>
-            <div class="social-menu">
+        <div class="logo">George<span>Orrala</span></div>
+        <nav id="nav-principal">
+            <a class="activo" data-vista="inicio">INICIO</a>
+            <a data-vista="proyectos">PROYECTOS</a>
+            <a data-vista="certificados">CERTIFICADOS</a>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activar modo nocturno" aria-pressed="false">
+                <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
+                <span id="theme-label">Modo nocturno</span>
+            </button>
+            <div class="social-icons">
                 <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </nav>
     </header>
-    <main>
-        <section id="inicio">
-            <div class="profile-container">
-                <img src="img/perfil.jpg" alt="Mi Foto" class="profile-image">
-                <h1 class="profile-name" id="profile-name"></h1>
-                <p class="profile-career" id="profile-career"></p>
-                <p class="profile-university" id="profile-university"></p>
+
+    <!-- CONTENEDOR PRINCIPAL (SPA) -->
+    <main class="contenedor-principal" id="app">
+
+        <!-- VISTA INICIO -->
+        <section class="vista activa" id="vista-inicio">
+            <div class="inicio-grid">
+                <!-- Izquierda: foto + nombre -->
+                <div class="perfil">
+                    <img src="img/perfil.jpg" 
+                         alt="Foto de George Orrala" />
+                    <h2>George Orrala</h2>
+                    <p>Electrónica &amp; Automatización</p>
+                </div>
+                <!-- Derecha: descripción profesional -->
+                <div class="descripcion">
+                    <h1>Hola, soy <span>George</span></h1>
+                    <span class="badge"><i class="fas fa-microchip"></i> PAO 8 · ESPOCH</span>
+                    <p>
+                        Estudiante de <strong>Electrónica y Automatización</strong> en la Escuela Superior 
+                        Politécnica de Chimborazo (ESPOCH). Apasionado por el control inteligente, 
+                        la instrumentación industrial y el desarrollo de sistemas embebidos. 
+                        Con experiencia en proyectos de automatización, diseño de circuitos y 
+                        programación de microcontroladores. Busco siempre integrar la tecnología 
+                        para resolver problemas del mundo real con eficiencia y creatividad.
+                    </p>
+                    <p>
+                        <i class="fas fa-map-pin" style="color:#1e6f9f;"></i> Riobamba, Ecuador &nbsp;|&nbsp;
+                        <i class="fas fa-calendar-alt" style="color:#1e6f9f;"></i> 2026
+                    </p>
+                    <a href="#" class="cta" id="btn-contacto"><i class="fas fa-paper-plane"></i> Contáctame</a>
+                </div>
             </div>
-            <div class="intro-container">
-                <p class="intro-small">PORTAFOLIO PROFESIONAL</p>
-                <h2 class="intro-title">Hola, soy <span id="profile-short-name"></span></h2>
-                <p class="intro-text" id="profile-description"></p>
+        </section>
+
+        <!-- VISTA PROYECTOS (datos desde JSON) -->
+        <section class="vista" id="vista-proyectos">
+            <h2 style="font-size:2rem; margin-bottom:0.2rem;">Proyectos</h2>
+            <p style="color:#3a5a75; margin-bottom:0.8rem;">Algunos de mis trabajos en automatización y electrónica.</p>
+            <div class="proyectos-grid" id="proyectos-container">
+                <!-- Renderizado con JS -->
             </div>
         </section>
-        <section id="proyectos">
-            <h2 class="section-title">Mis <span>proyectos</span></h2>
-            <p class="section-description">Proyectos académicos y profesionales.</p>
-            <div class="projects-grid" id="projects-container"></div>
+
+        <!-- VISTA CERTIFICADOS (datos desde JSON) -->
+        <section class="vista" id="vista-certificados">
+            <h2 style="font-size:2rem; margin-bottom:0.2rem;">Certificados</h2>
+            <p style="color:#3a5a75; margin-bottom:0.8rem;">Formación complementaria y logros académicos.</p>
+            <div class="certificados-lista" id="certificados-container">
+                <!-- Renderizado con JS -->
+            </div>
         </section>
-        <section id="certificados">
-            <h2 class="section-title">Mis <span>certificados</span></h2>
-            <p class="section-description">Formación complementaria y certificaciones.</p>
-            <div class="certificates-grid" id="certificates-container"></div>
-        </section>
+
     </main>
+
+    <!-- FOOTER -->
     <footer>
-        © <span id="year"></span> Mi Portafolio. Todos los derechos reservados.
+        &copy; 2026 George Alexander Orrala Tomalá · ESPOCH · Electrónica y Automatización
     </footer>
-    <script type="application/json" id="portfolio-data"></script>
+
+    <!-- Script local -->
     <script src="script.js"></script>
+
 </body>
 </html>

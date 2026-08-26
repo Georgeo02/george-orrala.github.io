@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102a43">
+    <title>Organizador | George Orrala</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="topbar">
+            <div class="brand-block">
+                <a class="back-link" href="../../index.html" aria-label="Volver al portafolio">&#8592; Portafolio</a>
+                <p class="kicker">Panel personal / 2026</p>
+                <h1>Organizador de trabajo</h1>
+                <p class="subtitle">Un tablero híbrido entre Kanban y Scrum para mantener el foco.</p>
+            </div>
+            <button class="primary-button" id="add-task-button" type="button">+ Nueva tarea</button>
+        </header>
+
+        <section class="toolbar" aria-label="Controles del tablero">
+            <div class="summary" id="summary"></div>
+            <label class="search-box">
+                <span>Buscar</span>
+                <input id="search-input" type="search" placeholder="Título, área o etiqueta" autocomplete="off">
+            </label>
+            <button class="memory-button" id="memory-button" type="button">Memoria <span id="memory-count">0</span></button>
+        </section>
+
+        <section class="board" id="board" aria-label="Tablero de tareas"></section>
+
+        <p class="save-note" id="save-note" role="status" aria-live="polite">Los cambios se guardan en este dispositivo.</p>
+    </main>
+
+    <dialog class="task-dialog" id="task-dialog">
+        <form id="task-form" method="dialog">
+            <div class="dialog-heading">
+                <div>
+                    <p class="kicker">Nueva tarjeta</p>
+                    <h2 id="dialog-title">Añadir tarea</h2>
+                </div>
+                <button class="icon-button" id="close-dialog" type="button" aria-label="Cerrar">&#10005;</button>
+            </div>
+            <input id="task-id" type="hidden">
+            <label>Título<input id="task-title" name="title" required maxlength="80" placeholder="Ej. Validar resultados del Buck"></label>
+            <label>Área o proyecto<input id="task-area" name="area" maxlength="40" placeholder="Ej. Electrónica de potencia"></label>
+            <label>Detalle<textarea id="task-detail" name="detail" rows="3" maxlength="180" placeholder="Qué debe quedar resuelto"></textarea></label>
+            <div class="form-grid">
+                <label>Prioridad<select id="task-priority" name="priority"><option value="high">Alta</option><option value="medium" selected>Media</option><option value="low">Baja</option></select></label>
+                <label>Estado<select id="task-status" name="status"></select></label>
+            </div>
+            <div class="dialog-actions">
+                <button class="quiet-button" id="cancel-dialog" type="button">Cancelar</button>
+                <button class="primary-button" type="submit">Guardar tarea</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog class="memory-dialog" id="memory-dialog">
+        <section>
+            <div class="dialog-heading">
+                <div><p class="kicker">Historial local</p><h2>Memoria</h2></div>
+                <button class="icon-button" id="close-memory" type="button" aria-label="Cerrar">&#10005;</button>
+            </div>
+            <p class="memory-intro">Aquí quedan las tareas eliminadas. Puedes restaurarlas al tablero cuando quieras.</p>
+            <div class="archive-list" id="archive-list"></div>
+            <button class="quiet-button clear-button" id="clear-memory" type="button">Vaciar memoria</button>
+        </section>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>

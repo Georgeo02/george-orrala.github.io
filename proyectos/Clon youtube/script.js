@@ -1,6 +1,12 @@
 (function () {
     'use strict';
 
+    const ASSET_VERSION = '2026.08.26.1';
+
+    function versionedAsset(path) {
+        return path + (path.includes('?') ? '&' : '?') + 'v=' + ASSET_VERSION;
+    }
+
     const videoGrid = document.getElementById('video-grid');
     const shortsGrid = document.getElementById('shorts-grid');
     const searchForm = document.getElementById('search-form');
@@ -18,22 +24,22 @@
     function renderVideos(videos) {
         videoGrid.innerHTML = videos.map(function (video) {
             const media = video.video
-                ? '<video class="preview-media" muted loop preload="metadata" poster="' + video.thumbnail + '"><source src="' + video.video + '" type="video/mp4"></video>'
-                : '<img src="' + video.thumbnail + '" alt="Miniatura de ' + video.title + '">';
-            return '<article class="video-card" data-title="' + video.title.toLowerCase() + '"><div class="video-thumb">' + media + '<span class="duration">' + video.duration + '</span></div><div class="video-info"><img class="channel-logo" src="' + video.logo + '" alt=""><div class="video-copy"><h3>' + video.title + '</h3><p>' + video.channel + '</p><p>' + video.views + ' · ' + video.date + '</p></div></div></article>';
+                ? '<video class="preview-media" muted loop preload="none" poster="' + versionedAsset(video.thumbnail) + '"><source src="' + versionedAsset(video.video) + '" type="video/mp4"></video>'
+                : '<img loading="lazy" decoding="async" src="' + versionedAsset(video.thumbnail) + '" alt="Miniatura de ' + video.title + '">';
+            return '<article class="video-card" data-title="' + video.title.toLowerCase() + '"><div class="video-thumb">' + media + '<span class="duration">' + video.duration + '</span></div><div class="video-info"><img class="channel-logo" loading="lazy" decoding="async" src="' + versionedAsset(video.logo) + '" alt="Logo de ' + video.channel + '"><div class="video-copy"><h3>' + video.title + '</h3><p>' + video.channel + '</p><p>' + video.views + ' · ' + video.date + '</p></div></div></article>';
         }).join('');
     }
 
     function renderShorts(shorts) {
         shortsGrid.innerHTML = shorts.map(function (short) {
             const media = short.video
-                ? '<video class="preview-media" muted loop autoplay playsinline poster="' + short.thumbnail + '"><source src="' + short.video + '" type="video/mp4"></video>'
-                : '<img src="' + short.thumbnail + '" alt="' + short.title + '">';
+                ? '<video class="preview-media" muted loop playsinline preload="none" poster="' + versionedAsset(short.thumbnail) + '"><source src="' + versionedAsset(short.video) + '" type="video/mp4"></video>'
+                : '<img loading="lazy" decoding="async" src="' + versionedAsset(short.thumbnail) + '" alt="' + short.title + '">';
             return '<article class="short-card"><span class="short-badge">SHORTS</span>' + media + '<h3>' + short.title + '</h3></article>';
         }).join('');
     }
 
-    fetch('data.json').then(function (response) {
+    fetch('data.json?v=' + ASSET_VERSION).then(function (response) {
         if (!response.ok) throw new Error('Data error');
         return response.json();
     }).then(function (data) {

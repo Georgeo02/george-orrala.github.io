@@ -1,6 +1,8 @@
 (function() {
     'use strict';
 
+    const ASSET_VERSION = '2026.08.26.2';
+
     // --- VARIABLES GLOBALES ---
     let datos = {};
 
@@ -16,6 +18,17 @@
     const certificadosContainer = document.getElementById('certificados-container');
     const fotoPerfil = document.querySelector('.perfil img');
     let temporizadorFotoPerfil;
+
+    function girarFotoInicial() {
+        if (!fotoPerfil) return;
+
+        fotoPerfil.classList.add('volteando');
+        fotoPerfil.src = 'img/informal.jpg?v=' + ASSET_VERSION;
+        temporizadorFotoPerfil = setTimeout(function() {
+            fotoPerfil.src = 'img/perfil.jpg?v=' + ASSET_VERSION;
+            fotoPerfil.classList.remove('volteando');
+        }, 900);
+    }
 
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
@@ -40,16 +53,18 @@
     }
 
     if (fotoPerfil) {
+        window.setTimeout(girarFotoInicial, 250);
+
         fotoPerfil.addEventListener('mouseenter', function() {
             clearTimeout(temporizadorFotoPerfil);
             fotoPerfil.classList.add('volteando');
-            fotoPerfil.src = 'img/informal.jpg';
+                fotoPerfil.src = 'img/informal.jpg?v=' + ASSET_VERSION;
         });
 
         fotoPerfil.addEventListener('mouseleave', function() {
             clearTimeout(temporizadorFotoPerfil);
             temporizadorFotoPerfil = setTimeout(function() {
-                fotoPerfil.src = 'img/perfil.jpg';
+                fotoPerfil.src = 'img/perfil.jpg?v=' + ASSET_VERSION;
                 fotoPerfil.classList.remove('volteando');
             }, 1000);
         });
@@ -58,7 +73,7 @@
     // --- Cargar datos desde data.json ---
     async function cargarDatos() {
         try {
-            const response = await fetch('data.json');
+            const response = await fetch('data.json?v=' + ASSET_VERSION);
             if (!response.ok) throw new Error('Error al cargar data.json');
             datos = await response.json();
             renderizarProyectos();

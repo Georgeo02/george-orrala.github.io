@@ -9,7 +9,7 @@
     <!-- Google Fonts (Roboto) -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <!-- Estilos locales -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2026.08.26.4" />
 </head>
 <body>
 
@@ -41,8 +41,10 @@
             <div class="inicio-grid">
                 <!-- Izquierda: foto + nombre -->
                 <div class="perfil">
-                    <img src="img/perfil.jpg" 
-                         alt="Foto de George Orrala" />
+                    <div class="perfil-foto">
+                        <img src="img/perfil.jpg?v=2026.08.26.1" width="220" height="220" fetchpriority="high" decoding="async"
+                            alt="Foto de George Orrala" />
+                    </div>
                     <h2>George Orrala</h2>
                     <p>Electrónica &amp; Automatización</p>
                 </div>
@@ -65,6 +67,7 @@
                     <a href="#" class="cta" id="btn-contacto"><i class="fas fa-paper-plane"></i> Contáctame</a>
                 </div>
             </div>
+
         </section>
 
         <!-- VISTA PROYECTOS (datos desde JSON) -->
@@ -93,7 +96,7 @@
     </footer>
 
     <!-- Script local -->
-    <script src="script.js"></script>
+    <script src="script.js?v=2026.08.26.2" defer></script>
 
 </body>
 </html>

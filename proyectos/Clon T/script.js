@@ -1,6 +1,8 @@
 (function () {
     'use strict';
 
+    const ASSET_VERSION = '2026.08.26.1';
+
     const bannerTrack = document.getElementById('banner-track');
     const bannerDots = document.getElementById('banner-dots');
     const usageGrid = document.getElementById('usage-grid');
@@ -8,7 +10,7 @@
     const feedback = document.getElementById('feedback');
 
     async function loadData() {
-        const response = await fetch('data.json');
+        const response = await fetch('data.json?v=' + ASSET_VERSION);
         if (!response.ok) throw new Error('No se pudo cargar la información');
         return response.json();
     }

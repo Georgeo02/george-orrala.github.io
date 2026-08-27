@@ -2,6 +2,7 @@
     'use strict';
 
     const STORAGE_KEY = 'george-organizador-tareas-v1';
+    const ASSET_VERSION = '2026.08.26.1';
     const statuses = [
         { id: 'todo', label: 'Por hacer' },
         { id: 'ready', label: 'Do it' },
@@ -40,7 +41,7 @@
                 localStorage.removeItem(STORAGE_KEY);
             }
         }
-        const response = await fetch('data.json');
+        const response = await fetch('data.json?v=' + ASSET_VERSION);
         const data = await response.json();
         state.tasks = data.tasks || [];
         saveState();

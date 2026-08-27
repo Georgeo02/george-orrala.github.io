@@ -143,9 +143,15 @@ nav a.activo {
     text-align: center;
     perspective: 900px;
 }
+.perfil-foto {
+    width: min(220px, 100%);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+}
 .perfil img {
+    display: block;
     width: 100%;
-    max-width: 220px;
+    height: 100%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;
@@ -158,6 +164,7 @@ nav a.activo {
 .perfil img.volteando {
     transform: rotateY(180deg);
 }
+
 .perfil h2 {
     margin-top: 1rem;
     font-size: 1.8rem;
@@ -380,7 +387,10 @@ body.modo-nocturno .theme-toggle:focus-visible {
         padding: 2rem 1.5rem;
     }
     .perfil img {
-        max-width: 180px;
+        width: 100%;
+    }
+    .perfil-foto {
+        width: min(180px, 100%);
     }
     .descripcion h1 {
         font-size: 1.8rem;

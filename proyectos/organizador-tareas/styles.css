@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&v=2026.08.26.1');
 
 :root { --ink:#102a43; --muted:#627d98; --paper:#f3f6f8; --white:#fff; --line:#d9e2ec; --blue:#227c9d; --red:#dc5a5a; --orange:#e39b35; --green:#24936f; --shadow:0 12px 30px rgba(16,42,67,.08); }
 * { box-sizing:border-box; }
